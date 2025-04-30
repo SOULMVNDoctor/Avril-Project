@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+    <link rel="stylesheet" href="pageVente.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ 
+   <div class="container">
+    <div class="image">
+        <h1>Photo</h1>
+        <img id="terrainImage" src="../ter1.jpg" alt="">
+        
+    </div>
+    <div class="des">
+      <p>
+        <h2>🏞️ Description du terrain</h2><br>
+        SUPERFICIE : <span id="superficie">1 hectare</span><br>
+        Adress: <span id="adresse">Cocody Faya</span><br>
+        Type de terrain : <span id="type">Plat</span>
+      </p>
+    </div>
+    <div class="note">
+      <div class="star-rating" id="starRating">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+      
+      <p id="noteValue">Note : 0 étoile(s)</p>
+       Propriétaire : <br>
+       <span id="proprio">Souleymane Sanogo</span><br>
+      Prix : <br>
+      <span id="prix">200 000 000 FCFA</span><br>
+       <input type="submit" value="Passez a l'achat">
+      
+    </div>
+    <i class="fa-solid fa-arrow-up" id="haut"></i>
+    <i class="fa-solid fa-arrow-down" id="bas"></i>
+  </div>  
+  <script src="pageVente.js"></script>
+</body>
+</html>

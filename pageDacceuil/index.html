@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'aceuil</title>
+  <link rel="stylesheet" href="aceuil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
+</head>
+
+<body>
+  <video src="../vidreplace.mp4" autoplay muted loop></video>
+
+  <!--en-tête de la page -->
+
+  <header>
+    <i class="fa-solid fa-bars" id="param"></i>
+
+    <img src="../Immobilier.png" alt="image">
+    <i class="fa-solid fa-magnifying-glass" id="loupe"></i>
+    <input type="text" id="recherche" placeholder="Recherche">
+    <i class="fa-solid fa-sliders" id="filtrer">
+      <h4>Filtrer</h4>
+    </i>
+    <i class="fa-solid fa-house" id="acceuil">
+      <h4>Acceuil</h4>
+    </i>
+    
+    <i class="fa-regular fa-bell" id="notification">
+      <p>Notification</p>
+    </i>
+    <i class="fa-regular fa-circle-user" id="vous">
+      <p>Vous</p>
+    </i>
+
+
+
+  </header>
+
+
+  <div id="menu" > 
+    <span id="closeBtn">&times;</span>
+    <ul>
+      <li onclick="showSection('status')">Status du compte</li>
+      <li onclick="showSection('activite')">Votre activité</li>
+      <li onclick="showSection('favoris')">Favoris</li>
+      <li onclick="showSection('partenariat')">Partenariat</li>
+      <li onclick="showSection('premium')">Offre Premium</li>
+      <li onclick="showSection('parametres')">Paramètres</li>
+    </ul>
+  </div>
+
+
+
+
+  <div id="votreCompte" class="hidden">
+    <h2 id="tir">Votre Compte</h2>
+    <div class="compte-menu">
+      <button id="info"><i class="fi fi-rr-user"></i>Information de compte</button><br>
+      <button id="terme"><i class="fi fi-tr-file-circle-info"></i>Termes & Conditions</button><br>
+    
+      <button id="propos"><i class="fi fi-rs-comment-info"></i>A propos</button><br>
+
+    </div>
+    <button id="deconnexion">Déconnexion<i class="fi fi-sc-exit"></i></button>
+  </div>
+
+<!--  notification-->
+
+<div class="Notification">
+  <button id="closeNote">&times;</button>
+  <p>Aucune notification</p>
+</div>
+
+
+
+
+
+
+
+  <!-- Div d'informations de l'utilisateur avec bouton de fermeture -->
+  <div class="info-container" id="infoDiv">
+    <button class="close-info" id="closeInfoBtn">&times;</button>
+    <h3>Informations du compte</h3>
+    <p><strong>Nom :</strong> <span id="infoNom"></span></p>
+    <p><strong>Prénom :</strong> <span id="infoPrenom"></span></p>
+    <p><strong>Email :</strong> <span id="infoEmail"></span></p>
+    <p><strong>Contact :</strong> <span id="infoNumero"></span></p>
+    <div class="pp">
+      <p>Meme si vous n'acheter pas vous pouvez quand meme laissez des notes sur les proprietés</p>
+    </div>
+  </div>
+
+
+
+
+  <!--Div information termes et condition avec bouton de fermeture-->
+  <div class="info-termes">
+    <button class="ferme-termes" id="ferme-btn">&times;</button>
+    <h2>Conditions Générales d'Utilisation (CGU) </h2>
+    <p>Dernière mise à jour : 01/04/2025 </p>
+    <p>1. Objet 
+      Les présentes Conditions Générales d'Utilisation (CGU) régissent l’accès et l’utilisation du site
+      internet SOULMVN (ci-après dénommé "le Site"), édité par SOULMVN, dont le siège social est situé à Cocody,
+      immatriculée au [RCS/Registre]. 
+
+      Le Site a pour objet de mettre en relation des particuliers et des professionnels dans le cadre de transactions
+      immobilières (achat, vente, location, gestion de biens, etc.). </p> 
+    <p>2. Acceptation des CGU 
+      L’accès et l’utilisation du Site impliquent l’acceptation pleine et entière des présentes CGU. Si l’utilisateur
+      n’accepte pas ces conditions, il doit cesser toute utilisation du Site. </p>
+    <p>3. Accès au Site 
+      Le Site est accessible gratuitement à tout utilisateur disposant d’un accès à Internet. Les frais liés à l’accès
+      (connexion Internet, matériel informatique, etc.) sont à la charge de l’Utilisateur. 
+      L’Éditeur se réserve le droit de suspendre, limiter ou interrompre l’accès au Site pour des raisons de
+      maintenance, de sécurité ou pour tout autre motif technique ou juridique, sans préavis ni indemnisation. </p>
+    <p>4. Fonctionnalités du Site 
+      Le Site propose notamment les services suivants : 
+      Consultation d’annonces immobilières 
+      Publication d’annonces (pour les utilisateurs inscrits) 
+      Mise en relation entre vendeurs/loueurs et acheteurs/locataires 
+      Outils de recherche et d’estimation immobilière 
+      Services premium (abonnements, options payantes, etc.) 
+      Certaines fonctionnalités peuvent être réservées aux utilisateurs inscrits et/ou payants. </p>
+    <p>5. Inscription et Compte Utilisateur 
+      Pour accéder à certaines fonctionnalités, l’Utilisateur doit créer un compte en fournissant des informations
+      exactes et à jour. 
+      L’Utilisateur s’engage à : 
+      Ne pas partager ses identifiants de connexion 
+      Ne pas créer de faux comptes 
+      Mettre à jour ses informations personnelles en cas de modification 
+      L’Éditeur se réserve le droit de suspendre ou supprimer un compte en cas de manquement aux CGU ou d’activité
+      frauduleuse. </p>
+    <p>6. Publication d’Annonces 
+      Les Utilisateurs (particuliers ou professionnels) peuvent publier des annonces sous réserve de respecter les
+      règles suivantes : 
+      Les annonces doivent concerner des biens immobiliers réels et disponibles 
+      Les informations fournies doivent être exactes et non trompeuses 
+      Les annonces ne doivent pas contenir de contenus illicites, discriminatoires ou contraires aux bonnes mœurs 
+      L’Éditeur peut modérer, modifier ou supprimer toute annonce non conforme sans préavis. </p>
+    <p>7. Responsabilités </p>
+    <p>7.1. Responsabilité de l’Éditeur 
+      Le Site agit comme une plateforme de mise en relation et n’intervient pas directement dans les transactions.
+      L’Éditeur ne garantit pas : 
+      L’exactitude des annonces publiées par les Utilisateurs 
+      La réalisation des transactions 
+      La qualité ou la conformité légale des biens proposés 
+      L’Éditeur décline toute responsabilité en cas de litige entre Utilisateurs. </p>
+    <p>7.2. Responsabilité de l’Utilisateur 
+      L’Utilisateur est seul responsable : 
+      De l’utilisation qu’il fait du Site 
+      Des informations qu’il publie 
+      Des échanges et transactions réalisés via le Site </p>
+    <p>8. Propriété Intellectuelle 
+      Le Site et son contenu (textes, images, logos, bases de données, etc.) sont protégés par les droits d’auteur et
+      autres droits de propriété intellectuelle. 
+      Toute reproduction, modification ou exploitation non autorisée est interdite. </p>
+    <p>9. Données Personnelles 
+      Les données collectées sur le Site sont traitées conformément à la Politique de Confidentialité disponible [lien
+      vers la politique]. </p>
+    <p>10. Modification des CGU 
+      L’Éditeur peut modifier les CGU à tout moment. Les Utilisateurs seront informés des changements, et leur poursuite
+      d’utilisation vaudra acceptation des nouvelles conditions. </p>
+    <p>11. Litiges et Droit Applicable 
+      Les présentes CGU sont soumises au droit [français/belge/suisse/etc.]. En cas de litige, les tribunaux  seront
+      compétents. </p>
+    <p>12. Contact 
+      Pour toute question, l’Utilisateur peut contacter l’Éditeur à l’adresse : soulmvn@gmail.com ou par courrier à
+      l’adresse du siège social. </p>
+     
+    <p>SOULMVN : soulmvn@gmail.com +225 01 53 98 50 50 
+      +225 05 55 37 37 57</p> <p>Cocody Riviera Faya </p>
+  </div>
+
+
+  <div class="propo">
+    <button class="fermeP" id="fermeP">&times;</button>
+    <h2> À Propos – SOULMVN Immobilier </h2>
+    <p>
+    <h5>Bienvenue sur SOULMVN,</h5>
+    </p>
+    <p>la plateforme innovante qui simplifie vos recherches et transactions immobilières. </p>
+    <p>
+    <h5>Notre Mission </h5> Chez SOULMVN Immobilier, nous croyons que trouver ou vendre un bien immobilier devrait être
+    simple, transparent et sécurisé.</p>
+    <p>
+    <h5>Notre objectif</h5> est de mettre en relation acheteurs, vendeurs, locataires et propriétaires avec des outils
+    performants et une expérience utilisateur optimale. </p>
+     
+    <p>
+    <h3>Nos Services </h3>
+    <h5>🔍 Recherche avancée :</h5> Trouvez facilement des biens (maisons, appartements, terrains) grâce à nos filtres
+    intelligents. 
+    <h5>📢 Publication gratuite :</h5> Proposez votre bien en quelques clics, avec des photos et descriptions
+    détaillées. 
+    <h5>📊 Estimation en ligne :</h5> Obtenez une évaluation instantanée de votre propriété. 
+    <h5>🔐 Sécurité renforcée :</h5> Nous protégeons vos données et facilitons les échanges en toute confiance. </p>
+    <p>
+    <h5>Pourquoi Nous Choisir ? </h5>
+    ✅ Large choix : Des milliers d’annonces vérifiées. ✅ Interface intuitive : Une navigation fluide sur tous les
+    appareils. ✅ Expertise locale : Des conseils et actualités immobilières. ✅ Support réactif : Une équipe à votre
+    écoute pour chaque étape. </p>
+     
+    <p>
+    <h3>Notre Équipe </h3>
+    Fondé le /01/04 2025, SOULMVN Immobilier est porté par une équipe passionnée d’experts en immobilier et en
+    technologie, engagés à révolutionner votre expérience d’achat, de vente ou de location. 
+    Votre portail immobilier n°1 avec +1 000 000 biens disponibles et +500 000 transactions facilitées chaque année ! 
+    </p>
+    <p>
+    <h3>Notre Mission </h3>
+    Chez SOULMVN Immobilier, nous révolutionnons l’immobilier en offrant une expérience simple, rapide et sécurisée pour
+    acheter, vendre ou louer un bien. 
+    </p>
+    <p>Nos Chiffres Clés 
+      ✅ +1 000 000 annonces vérifiées ✅ +2 500 000 utilisateurs mensuels ✅ 100% de satisfaction client (2025) ✅ +500
+      000 transactions annuelles ✅ +10 000 professionnels partenaires </p>
+     
+    <p>
+    <h3> Services </h3>
+    </p>
+    <p>🏠 Vente & Achat : Maisons, appartements, terrains, investissements</p> 🔍 Recherche Intelligente : Filtres
+    avancés (prix, superficie, géolocalisation)</p>
+    <p> 📈 Estimation Gratuite : Évaluez votre bien en 2 minutes
+    <p> 📱 Application Mobile : Gérez vos recherches et annonces en déplacement </p>
+    <p>
+    <h3>Pourquoi Nous Choisir ? </h3>
+    </p>
+    <p>✨ Transparence : Pas de frais cachés <br>  ⚡ Rapidité : 85% des utilisateurs trouvent un bien en moins de 3
+      semaines  <br>🛡️ Sécurité : Paiements sécurisés et annonces modérées <br> 🌍 Couverture Nationale : Disponible
+      dans toutes les villes </p>
+     
+    <P>
+    <h3>Notre Engagement </h3>
+    "Chez [Nom du Site Immobilier], nous croyons que trouver son logement devrait être un plaisir. C’est pourquoi nous
+    combinons technologie de pointe et conseils humains pour vous guider."</p> <br>
+    <p> — Souleymane SANOGO, Fondateur & CEO </p>
+     
+    <p>
+    <h3>Contact & Réseaux Sociaux </h3>
+    📧 soulmvn@gmail.com 📞 +225 01 53 98 50 50 📍 Cocody Riviera Faya <br>
+    🔹 Suivez-nous : <br>  Facebook | Instagram | LinkedIn | TikTok </p>
+     
+    <p>
+    <h3>Contactez-Nous </h3>
+    <p>📧 Email :  📞 Téléphone :  🏢 Adresse :  </p>
+    Rejoignez-nous sur les réseaux sociaux : 
+    Facebook | Instagram | LinkedIn </p>
+    <p>SOULMVN Immobilier – Votre partenaire immobilier de confiance. </p>
+     
+    <p>© 2025 SOULMVN Immobilier. Tous droits réservés. </p>
+  </div>
+
+
+
+
+
+
+
+
+  <!--en-tête de la page -->
+
+
+  <main>
+    <div class="paragraph">
+      <h2 id="titreChangeant" class="animation-titre">La qualité en toutes securité,</h2>
+      <p id="texteChangeant" class="animation-texte">Chez SOULMVN Immobilier vous avez les meilleurs opportunitées
+        immobilière sur toutes l’etendue du territoire National.</p>
+    </div>
+    <div class="image">
+      <img src="../ter.jpg" alt="image" class="image1">
+      <img src="../images.jpg" alt="image" class="image2">
+      <img src="../images (2).jpg" alt="image" class="image3">
+      <img src="../lausanne.webp" alt="image" class="image4">
+      <img src="../images (3).jpg" alt="image" class="image5">
+      <img src="../images (1).jpg" alt="image" class="image6">
+    </div>
+
+
+
+  </main>
+  
+  <div id="content">
+    <div id="status" class="section">
+      <button class="close-btn" onclick="closeSection()">×</button>
+      <h2>Status du compte</h2>
+      <p>Vous êtes connecté en tant qu’utilisateur.
+        Vous avez accès aux fonctionnalités de base. </p>
+    </div>
+
+    <div id="activite" class="section">
+      <button class="close-btn" onclick="closeSection()">×</button>
+      <h2>Votre activité</h2>
+      <p>votre derniere activité en ligne date d'aujourd'hui</p>
+    </div>
+    <div id="favoris" class="section">
+      <button class="close-btn" onclick="closeSection()">×</button>
+      <h2>Favoris</h2>
+      <p>aucun favoris</p>
+    </div>
+    <div id="partenariat" class="section">
+      <button class="close-btn" onclick="closeSection()">×</button>
+      <h2>Partenariat</h2>
+      <p>pour vendre votre propieté vous devez postuler, <br> un de nos agens va vous contacter pour les formalité <br>
+        <input type="submit" value="Postuler" id="postu">
+      </p>
+    </div>
+    <div id="premium" class="section">
+      <button class="close-btn" onclick="closeSection()">×</button>
+      <h2>Offre prenium</h2>
+      <p> Souscription <br>
+      <h3>15 000 FCFA / Mois </h3> <br>Vous aurez acces a toutes les fonctionalites,et avantages prenium. Vous serez
+      l’un des administrateur de la plateforme <br> </p>
+      <img src="../djamo.png" alt="" id="ag">
+      <img src="../wave.png" alt="" id="ag">
+    </div>
+    <div id="parametres" class="section">
+      <button class="close-btn" onclick="closeSection()">×</button>
+      <h2>Paramètres</h2>
+      <p>Recevoir toutes les notifications <input type="checkbox"> <br>
+
+        Bloquer les notifications <input type="checkbox"> </p>
+    </div>
+  </div>
+
+
+
+
+
+  <!--corps de la page-->
+
+  <footer>
+    <section id="firstBlock">
+      <div id="first">
+        <h1>🏢 Soulmvn Immobilier</h1>
+        Adresse : Abidjan, Cocody Faya <br>
+        Téléphone : 01 53 98 50 50 <br>
+        Email : contact@soulmvn.ci <br>
+        Horaires d’ouverture : Lundi à Samedi, de 8h à 18h
+      </div>
+      <img src="../img.jpg" alt="">
+    </section>
+    <section id="secondBlock">
+      <div id="sedcond">
+        <h2 class="em">🌍 Qui sommes-nous ?</h2>
+        Soulmvn Immobilier est une agence immobilière basée à Abidjan, spécialisée dans la vente, la location et la
+        gestion de biens immobiliers. <br> Nous accompagnons nos clients avec professionnalisme, transparence et
+        proximité. Que vous soyez à la recherche d’un appartement, <br> d’une villa ou d’un local commercial, nous
+        mettons
+        tout en œuvre pour répondre à vos besoins.
+      </div>
+      <div id="third">
+        <h2 class="et">📱 Suivez-nous sur les réseaux sociaux</h2>
+        <p class="icon"><a href="https://www.facebook.com/share/1F5uZbXSQf/" id="or"><i
+              class="fa-brands fa-facebook"></i></a><a
+            href="https://www.instagram.com/sul_darks?igsh=MTh0bjZtNmg2cXYycQ==" id="or"><i
+              class="fa-brands fa-instagram"></i></a><a href="https://www.linkedin.com/in/souleymane-sanogo-38542b34a "
+            id="or"><i class="fa-brands fa-linkedin"></i></a><a href="https://wa.me/qr/CVDNEFKUPD4LJ1" id="or"><i
+              class="fa-brands fa-whatsapp"></i></a><a href="http://www.youtube.com/@G.O.A.T_Destroye" id="or"><i
+              class="fa-brands fa-youtube"></a></i><a href="https://github.com/SOULMVNDoctor" id="or"><i
+              class="fa-brands fa-github"></i></a><a
+            href="https://www.tiktok.com/@soul_mvn?is_from_webapp=1&sender_device=pc" id="or"><i
+              class="fa-brands fa-tiktok"></i></a></p>
+        <p class="copyright">© 2025 Soulmvn Immobilier
+          Tous droits réservés.</p>
+      </div>
+
+    </section>
+  </footer>
+
+
+
+
+  <!-- Popup de connexion -->
+  <div id="popupConnexion" class="popup hidden">
+    <div class="popup-content">
+      <span id="fermerPopup" class="close">&times;</span>
+      <h2>Connectez-vous ou inscrivez-vous</h2>
+      <p>Vous devez être connecté pour accéder à cette fonctionnalité.</p>
+      <button onclick="window.location.href='../pagesDeConnexion/pageConnexion.html'">Se connecter</button>
+      <button onclick="window.location.href='../pagesDeConnexion/newCompte.html'">S'inscrire</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="aceuil.js"></script>
+  <script src="compte.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+*{
+margin: 0;
+padding:0;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Archivo Narrow", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container{
+    margin-top:80px;
+   width:400px;
+    height:500px;
+    background-color: rgba(183, 175, 175, 0.6);
+    border-radius:20px;
+    box-shadow:0px 5px 15px rgba(0, 0, 0, 0.75);
+
+}
+
+
+.container h1{
+    margin-top:30px;
+    margin-left:80px;
+    font-family: "Archivo Narrow", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.nom h5{
+    margin-top:40px;
+    margin-left:65px;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.nom input{
+    margin-left:65px; 
+    border: none;
+    width:300px;
+    height: 25px;
+    background-color: #d9d9d9;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.nom input:focus{
+    outline: none;
+    border: 1px solid #8da5da;
+    background-color: white;
+}
+
+
+.prenom h5{
+    margin-top:20px;
+    margin-left:65px;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.prenom input{
+    margin-left:65px;
+    border: none;
+    width:300px;
+    height: 25px;
+    background-color: #d9d9d9;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.prenom input:focus{
+    outline: none;
+    border: 1px solid #8da5da;
+    background-color: white;
+}
+
+.email h5{
+    margin-top:20px;
+    margin-left:65px;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.email input{
+    margin-left:65px;
+    border: none;
+    width:300px;
+    height: 25px;
+    background-color: #d9d9d9;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.email input:focus{
+    outline: none;
+    border: 1px solid #8da5da;
+    background-color: white;
+}
+
+
+
+.num h5{
+    margin-top:20px;
+    margin-left:65px;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.num input{
+    margin-left:65px; 
+    border: none;
+    width:300px;
+    height: 25px;
+    background-color: #d9d9d9;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.num input:focus{
+    outline: none;
+    border: 1px solid #8da5da;
+    background-color: white;
+}
+
+.enregistrer input{
+    border: none;
+    margin-top:20px;
+    margin-left:120px;
+    background-color: #796969;
+    width:160px;
+    height: 40px;
+    border-radius:30px;
+    font-size: 25px;
+    color: #fff;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.passw h5{
+
+    margin-top:20px;
+    margin-left:65px;
+}
+
+.passw input{
+    margin-left:65px; 
+    border: none;
+    width:300px;
+    height: 25px;
+    background-color: #d9d9d9;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+.passw input:focus{
+    outline: none;
+    border: 1px solid #8da5da;
+    background-color: white; 
+}
+
+#enr:hover {
+background-color: #8da5da;
+}
+
+
+
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #8da5da;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 1000;
+    animation: fadeInScale 0.4s ease;
+    text-align: center;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

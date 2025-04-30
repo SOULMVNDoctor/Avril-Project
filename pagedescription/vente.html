@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente</title>
+    <link rel="stylesheet" href="vente.css">
+</head>
+<body>
+    <div class="products-container">
+        <div class="product-card">
+            <div class="product-image">
+                <!-- Espace pour votre image -->
+                <img src="../ter1.jpg" alt="Terrain" class="product-img">
+            </div>
+            <div class="product-info">
+                <h2 class="product-name">Terrain plat \ Cocody Faya</h2>
+                <p class="product-price">1 hectare </p>
+                <div class="quantity-selector">
+                    <span>200 000 000 FCFA</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <!-- Espace pour votre image -->
+                <img src="../ter2.jpg" alt="Terrain" class="product-img">
+            </div>
+            <div class="product-info">
+                <h2 class="product-name">Terrain Sablonneux \ Yopougon</h2>
+                <p class="product-price">2 hectares</p>
+                <div class="quantity-selector">
+                    <span>150 000 000 FCFA</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <!-- Espace pour votre image -->
+                <img src="../ter3.jpg" alt="Terrain" class="product-img">
+            </div>
+            <div class="product-info">
+                <h2 class="product-name">Terrain Marécageux \ Bingerville</h2>
+                <p class="product-price">500m²</p>
+                <div class="quantity-selector">
+                    <span>100 000 000 FCFA</span>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <!-- Espace pour votre image -->
+                <img src="../ter4.webp" alt="Terrain" class="product-img">
+            </div>
+            <div class="product-info">
+                <h2 class="product-name">Terrain plat \ Bassam</h2>
+                <p class="product-price">5 hectares</p>
+                <div class="quantity-selector">
+                    <span>1 000 000 000 FCFA</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <!-- Espace pour votre image -->
+                <img src="../ter5.jpg" alt="Terrain" class="product-img">
+            </div>
+            <div class="product-info">
+                <h2 class="product-name">Terrain Montagneux \ Man</h2>
+                <p class="product-price">800m²</p>
+                <div class="quantity-selector">
+                    <span>70 000 000 FCFA</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <!-- Espace pour votre image -->
+                <img src="../ter6.jpeg" alt="Terrain" class="product-img">
+            </div>
+            <div class="product-info">
+                <h2 class="product-name">Terrain plat \ Daloa</h2>
+                <p class="product-price">450m²</p>
+                <div class="quantity-selector">
+                    <span>20 000 000 FCFA</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="product-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img id="modal-img" src="" alt="Image terrain">
+                <h2 id="modal-title"></h2>
+                <p id="modal-size"></p>
+                <p id="modal-price"></p>
+            </div>
+            <button id="buy-btn" class="buy-button">Acheter</button>
+
+        </div>
+        
+
+    <script src="vente.js"></script>
+</body>
+</html>

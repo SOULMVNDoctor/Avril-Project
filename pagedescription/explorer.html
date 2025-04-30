@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explorer les Opportunités</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="explorer.css" />
+</head>
+<body>
+
+  <div class="header">
+    <h1> Explorer les Opportunités</h1>
+    <p>Découvrez visuellement les meilleurs investissements immobiliers</p>
+  </div>
+
+  <div class="filters">
+    <button>🔽 Filtres</button>
+  </div>
+
+  <div class="container">
+    <div id="map"><img src="../map.jpg" alt=""></div>
+    <div class="sidebar">
+      <h2>Résultats</h2>
+      <select>
+        <option>Rendement (⬇)</option>
+        <option>Rendement (⬆)</option>
+      </select>
+      <div class="result">
+        <img src="../vente1.jpeg" alt="">
+        <strong>Cocody Angré</strong><br />
+        <small>Angré 7ème</small>
+        <span class="badge">7.5%</span>
+      </div>
+      <div class="result">
+        <img src="../int5.jpg" alt="">
+        <strong>Cocody </strong><br />
+        <small>Angré </small>
+        <span class="badge">7.5%</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

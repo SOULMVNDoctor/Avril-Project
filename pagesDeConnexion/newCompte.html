@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newCompte</title>
+    <link rel="stylesheet" href="newCompte.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video src="../vid1.mp4" autoplay muted loop>
+    </video>
+    <div class="container">
+        <form action="" method="post">
+            <h1>Creer un Compte</h1>
+            
+            <label for="name" class="nom">
+                <h5>Entrer votre nom</h5>
+                <input type="text" placeholder="Nom" minlength="2" maxlength="15" required pattern="^[A-Za-zÀ-ÿ\s]{4,15}$" title="Seuls les lettres sont autorisés (pas de symboles)">
+            </label>
+            <label for="prenom" class="prenom">
+                <h5>Entrer vos prenoms</h5>
+                <input type="text" placeholder="Prenoms" minlength="4" maxlength="30"  required>
+                </label>
+                <label for="email" class="email">
+                    <h5>Entrer votre adress mail valide</h5>
+                    <input type="email" placeholder="Email"required>
+                </label>
+                <label for="num" class="num">
+                    <h5>Entrer votre numeros de telephone</h5>
+                    <input type="text" pattern="\d+" minlength="10" maxlength="10" placeholder="01 24 24 24 01" required title="Veillez entrer des chiffre uniquement">
+                </label>
+
+                <label for="password" class="passw">
+                    <h5>Creer un mot de pass</h5>
+                    <input type="text" minlength="6" maxlength="12" required>
+                </label>
+                
+                <label for="s'enregistrer" class="enregistrer">
+                    <br>
+                    <input type="submit" value="S'enregistrer" id="enr">
+                </label>
+                <a href="../pagesDeConnexion/pageConnexion.html">Se connecter</a>
+        </form>
+        
+        </div>
+    </div>
+
+    <div id="customAlert" class="alert">
+        <p>✅ Compte créé avec succès !</p>
+    </div>
+
+    <script src="newCompte.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,192 @@
+*{padding: 0;
+  margin: 0;
+  box-sizing: border-box;}
+
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ body video{
+    width: 100vw;
+    height: 100vw;
+    z-index:-1;
+    position: fixed;
+    object-fit: cover;
+ }
+ 
+ .formulaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+.container{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0EBEB;
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.75);
+ }
+
+ .connexion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    position: relative;
+    z-index: 1;
+    margin-left:5px;
+
+ }
+
+
+
+.connexion h1{
+    margin-bottom:30px;
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+.connexion h6{
+    font-size: 11px;
+    margin-bottom: 5px;
+    color: #706565;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+#aa{
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 15px;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#aa:hover{
+    color: #8da5da;
+    cursor: pointer;
+}
+
+#connec{
+    background-color: #8da5da;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#connec:hover{
+    background-color: #48b4a9;
+    color: white;
+    transition: 0.3s;
+}
+    
+    
+.maill{
+    border: none;
+    background-color: #d9d9d9;
+    font-size: 15px;
+    height:20px;
+    margin-bottom:11px;
+    padding-left:5px;
+
+}
+
+
+.maill:focus{
+    outline: none;
+    border: 1px solid #8da5da;
+    background-color: white;
+}
+
+
+.pass{
+    border: none;
+    background-color: #d9d9d9;
+    font-size: 15px;
+    height:20px;
+    padding-left:5px;
+}
+
+
+.pass:focus{
+    outline: none;
+    border: 1px solid #8da5da;
+    background-color: white;
+}
+
+
+ .inscription{
+    padding-top:30px;
+    padding-left:10px;
+    width: 500px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: #8da5da;
+    border-radius: 65px 19px 19px 57px;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+ }
+
+    .inscription h1{
+        color: white;
+        font-size: 30px;
+        padding-left: 20px;
+        font-family: "Archivo Narrow", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        
+    }
+
+    .inscription h3{
+        font-size:15px;
+        margin-top:30px;
+        margin-left: 5px;
+        margin-right:5px;
+        color: #706565;
+        line-height:20px;
+        font-family: "Archivo Narrow", sans-serif;
+        font-optical-sizing: auto;
+    }
+
+    #creat{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        margin-top:50px;
+        width:170px;
+        height:40px;
+        border: none;
+        border-radius:30px;
+        margin-left:40px;
+        background-color:#F0EBEB;
+        font-size:18px;
+    }
+
+
+    #creat:hover{
+        background-color: #4c6e94;
+        cursor: pointer;
+    }
